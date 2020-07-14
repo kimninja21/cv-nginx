@@ -6,7 +6,6 @@ platform:
   arch: amd64
 
 steps:
-
 - name: build
   image: nginx
   commands:
