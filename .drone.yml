@@ -1,0 +1,22 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+platform:
+  arch: amd64
+
+steps:
+
+- name: build
+  image: nginx
+  commands:
+    - cp -r /drone/src/. /usr/share/nginx/html
+    - cd /usr/share/nginx/html
+
+- name: publish
+  image: plugins/docker
+  settings:
+    username: iamkimninja
+    password: MW374fnny.d
+    repo: iamkimninja/cv-nginx
+    tags: latest

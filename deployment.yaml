@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: personal-space
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cv-nginx
+  namespace: personal-space
+  labels:
+    app: cv-nginx
+spec:
+  selector:
+    matchLabels:
+      app: cv-nginx
+  template:
+    metadata:
+      labels:
+        app: cv-nginx
+    spec:
+      containers:
+      - name: cv-nginx
+        image: localhost:32000/cv-nginx:registry
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  # This name uniquely identifies the service
+  namespace: personal-space
+  name: cv-nginx-service
+  labels:
+    app: cv-nginx
+spec:
+  type: LoadBalancer
+  ports:
+    - name: cv-nginx-http
+      port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    # Looks for labels `app:cv-nginx` in the namespace and applies the spec
+    app: cv-nginx
