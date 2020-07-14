@@ -18,4 +18,4 @@ steps:
   settings:
     registry: localhost:32000
     repo: localhost:32000/cv-nginx
-    tags: [ "${DRONE_COMMIT_SHA:0:7}","registry" ]
+    tags: registry
