@@ -16,7 +16,6 @@ steps:
 - name: publish
   image: plugins/docker
   settings:
-    username: iamkimninja
-    password: MW374fnny.d
-    repo: iamkimninja/cv-nginx
-    tags: latest
+    registry: localhost:32000
+    repo: localhost:32000/cv-nginx
+    tags: [ "${DRONE_COMMIT_SHA:0:7}","registry" ]
