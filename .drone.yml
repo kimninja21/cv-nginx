@@ -17,5 +17,5 @@ steps:
   image: plugins/docker
   settings:
     registry: localhost:32000
-    repo: localhost:32000/cv-nginx
+    repo: 127.0.0.1:32000/cv-nginx
     tags: registry
