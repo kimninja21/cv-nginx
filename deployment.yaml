@@ -20,7 +20,7 @@ spec:
         app: cv-nginx
     spec:
       containers:
-      - name: cv-nginx
+      - name: cv-nginx-container
         image: iamkimninja/cv-nginx
         ports:
         - containerPort: 80
