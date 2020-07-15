@@ -20,7 +20,7 @@ steps:
     repo: iamkimninja/cv-nginx
     tags: latest
 
- - name: deploy
+ deploy:
    image: quay.io/honestbee/drone-kubernetes
    kubernetes_server: https://kubernetes.iamkim.ninja
    kubernetes_token: bWEyZU9DY0R2clY3dHdXLzliNU9SVjVrcDBPM3RiMGVOUUVmQXZwTk5JUT0K
