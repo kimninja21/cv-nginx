@@ -20,7 +20,7 @@ steps:
     repo: iamkimninja/cv-nginx
     tags: latest
 
-- name: deploy
+- name: Deploy app
   image: image: danielgormly/drone-plugin-kube:0.2.0
   settings:
     kubernetes_server: https://kubernetes.iamkim.ninja
