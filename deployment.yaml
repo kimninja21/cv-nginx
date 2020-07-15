@@ -15,8 +15,8 @@ spec:
         app: cv-nginx
     spec:
       containers:
-      - name: cv-nginx-container
-        image: iamkimninja/cv-nginx:{{ build_number }}
+      - name: cv-nginx
+        image: iamkimninja/cv-nginx:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
