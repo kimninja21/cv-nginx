@@ -21,7 +21,7 @@ steps:
     tags: latest
 
 - name: Deploy app
-  image: image: danielgormly/drone-plugin-kube:0.2.0
+  image: danielgormly/drone-plugin-kube:0.2.0
   settings:
     kubernetes_server: https://kubernetes.iamkim.ninja
     kubernetes_token: bWEyZU9DY0R2clY3dHdXLzliNU9SVjVrcDBPM3RiMGVOUUVmQXZwTk5JUT0K
