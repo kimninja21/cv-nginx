@@ -21,11 +21,8 @@ steps:
     tags: latest
 
 - name: deploy
-  deploy:
-    image: quay.io/honestbee/drone-kubernetes
+  image: image: danielgormly/drone-plugin-kube:0.2.0
+  settings:
     kubernetes_server: https://kubernetes.iamkim.ninja
     kubernetes_token: bWEyZU9DY0R2clY3dHdXLzliNU9SVjVrcDBPM3RiMGVOUUVmQXZwTk5JUT0K
-    namespace: personal-space
-    deployment: deployment
-    container: cv-nginx
-    tag: latest
+    template: deployment.yaml
