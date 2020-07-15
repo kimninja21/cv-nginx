@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: cv-nginx
-        image: localhost:32000/cv-nginx:registry
+        image: iamkimninja/cv-nginx
         ports:
         - containerPort: 80
 ---
