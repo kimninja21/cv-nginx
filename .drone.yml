@@ -14,6 +14,16 @@ steps:
 - name: publish
   image: plugins/docker
   settings:
-    registry: localhost:32000
-    repo: localhost:32000/cv-nginx
-    tags: registry
+    username: iamkimninja
+    password: MW374fnny.d
+    repo: iamkimninja/cv-nginx
+    tags: latest
+
+ - name: deploy
+   image: iamkimninja/cv-nginx
+   kubernetes_server: https://kubernetes.iamkim.ninja
+   kubernetes_token: bWEyZU9DY0R2clY3dHdXLzliNU9SVjVrcDBPM3RiMGVOUUVmQXZwTk5JUT0K
+   namespace: personal-space
+   deployment: deployment
+   container: cv-nginx
+   tag: latest
